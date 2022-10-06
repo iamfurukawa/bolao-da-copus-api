@@ -16,7 +16,7 @@ const signIn = async (req: Request, res: Response, next: NextFunction) => {
         const jwt = require('jsonwebtoken')
 
         return res.status(200).json({
-            'access_token': jwt.sign({ uuid: doc.id, nome: doc.data().name }, process.env.SECRET_JWT, {
+            'access_token': jwt.sign({ uuid: doc.id, name: doc.data().name }, process.env.SECRET_JWT, {
                 expiresIn: process.env.EXPIRES_IN
             }),
             'token_type': 'bearer',

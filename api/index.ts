@@ -48,6 +48,9 @@ router.use((req, res, next) => {
         if (Date.now() >= decoded.expires_in * 1000)
             throw 'Token expired'
 
+        req.headers['userId'] = decoded.uuid
+        req.headers['username'] = decoded.name
+
         next();
     } catch (err) {
         console.error('Error on middleware auth=', err)

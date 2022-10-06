@@ -7,21 +7,23 @@ import { matches } from '../services/game/matches';
 
 const createOrUpdate = async (req: Request, res: Response, next: NextFunction) => {
     let bet = req.body as Bet;
+    let userId = req.headers['userId'] as string;
+    bet.userId = userId
+
     console.table(bet)
     try {
         const match = matches.find(match => match.id === bet.gameId) || null
-        console.log(match)
+        console.table(match)
         if (!match)
             throw 'Match not found'
 
         if (moment().isAfter(moment(match!.horario).add(1, 'minute')))
             throw 'Times up for bets'
 
-        const betDoc = await getBetByUserAndGame(bet.userId, bet.gameId)
+        const betDoc = await getBetByUserAndGame(userId, bet.gameId)
         if (betDoc.size === 0) {
             console.log('Creating bet')
             saveBet(bet)
-
         } else {
             console.log('Updating bet')
             let betData = betDoc.docs[0].data()
