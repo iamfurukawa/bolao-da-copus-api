@@ -19,11 +19,11 @@ export const matches = [
     },
     {
         'id': '2',
-        'horario': '2022-10-05 20:53:00',
-        'active': moment().isBefore(moment('2022-10-05 20:53:00').add(1, 'minute')),
+        'horario': '2022-10-06 12:14:00',
+        'active': moment().isBefore(moment('2022-10-06 12:14:00').add(1, 'minute')),
         'ended': false,
         'time1': {
-            'nome': Teams.Brasil,
+            'nome': Teams.Alemanha,
             'gols': -1
         },
         'time2': {
