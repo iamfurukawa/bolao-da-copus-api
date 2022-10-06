@@ -9,7 +9,7 @@ def execute():
     for user in users:
         bets = firestore.retrieveAllBetsByUser(user.id)
         print('bets={}'.format(bets))
-        table.append(calculator.apply(user.to_dict()['name'], bets))
+        table.append(calculator.apply(user.id, user.to_dict()['name'], bets))
     firestore.saveClassification({'classification': table, 'dateTime': datetime.now().strftime("%Y/%m/%d %H:%M:%S")})
 
 execute()
