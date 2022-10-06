@@ -3,7 +3,7 @@
     "trailingSlash": false,
     "rewrites": [
         {
-            "source": "/api/(.*)",
+            "source": "/api/server/(.*)",
             "destination": "/api"
         }
     ]
