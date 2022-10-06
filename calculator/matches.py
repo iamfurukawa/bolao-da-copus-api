@@ -1,7 +1,7 @@
 import requests
 import json
 
-BASE_URL = 'http://localhost:3000'
+BASE_URL = 'https://bolao-da-copus-api.vercel.app/api'
 
 def auth():
     headers = { 'document': '43196786803', 'password': 'Vinicius1996!' }
