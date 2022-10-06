@@ -22,7 +22,7 @@ router.use(express.urlencoded({ extended: false }));
 /** Takes care of JSON data */
 router.use(express.json());
 
-router.use('/auth', routesAuth);
+router.use('/api/server/auth', routesAuth);
 
 /** RULES OF OUR API */
 router.use((req, res, next) => {
@@ -56,9 +56,9 @@ router.use((req, res, next) => {
 });
 
 /** Routes */
-router.use('/bet', routesBet);
-router.use('/games', routesGames);
-router.use('/classification', routeClassification);
+router.use('/api/server/bet', routesBet);
+router.use('/api/server/games', routesGames);
+router.use('/api/server/classification', routeClassification);
 
 /** Error handling */
 router.use((req, res, next) => {
