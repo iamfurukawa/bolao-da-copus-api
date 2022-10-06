@@ -1,5 +1,6 @@
 export interface ClassificationRow {
     'name': string,
+    'userId': string,
     'pts': number,
     'ac': number,
     'gv': number,

@@ -17,12 +17,13 @@ def retrieveMatchesDict():
     return matchesHash
 
 
-def apply(username, bets=[]):
+def apply(userId, username, bets=[]):
 
     matchesHash = retrieveMatchesDict()
 
     row = {
         'name': username,
+        'userId': userId,
         'pts': 0,
         'ac': 0,
         'gv': 0,
