@@ -4,7 +4,7 @@
   "main": "api/server.ts",
   "scripts": {
     "dev": "nodemon api/server.ts",
-    "build": "rm -rf build/ && tsc"
+    "build": "rm -rf public/ && tsc"
   },
   "license": "MIT",
   "dependencies": {
