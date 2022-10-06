@@ -4,11 +4,14 @@ import * as dotenv from 'dotenv';
 import express, { Express } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
+import * as moment from 'moment-timezone';
 
 import routesBet from '../source/routes/bet';
 import routesAuth from '../source/routes/auth';
 import routesGames from '../source/routes/games';
 import routeClassification from '../source/routes/classification';
+
+moment.tz.setDefault("America/Sao_Paulo");
 
 dotenv.config()
 const router: Express = express();

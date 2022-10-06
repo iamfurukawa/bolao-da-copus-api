@@ -5,7 +5,7 @@ import moment from 'moment';
 export const matches = [
     {
         'id': '1',
-        'horario': '2022-10-06 19:14:00',
+        'horario': '2022-10-06 23:59:00',
         'active': moment().isBefore(moment('2022-10-06 23:59:00').add(1, 'minute')),
         'ended': true,
         'time1': {
