@@ -9,6 +9,7 @@ const createOrUpdate = async (req: Request, res: Response, next: NextFunction) =
     let bet = req.body as Bet;
     let userId = req.headers['userId'] as string;
     bet.userId = userId
+    bet.dateTime = moment().format("YYYY-MM-DD HH:mm:ss").toString()
 
     console.table(bet)
     try {
@@ -29,7 +30,6 @@ const createOrUpdate = async (req: Request, res: Response, next: NextFunction) =
             let betData = betDoc.docs[0].data()
             betData.time1 = bet.time1
             betData.time2 = bet.time2
-            betData.dateTime = moment().format("YYYY-MM-DD HH:mm:ss").toString()
             updateBet(betData, betDoc.docs[0].id)
         }
         return res.status(201).json()
