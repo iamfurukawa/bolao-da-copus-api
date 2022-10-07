@@ -143,8 +143,8 @@ def getScoreType(match, bet):
     return ER
 
 
-# matches = [{'id': '1', 'horario': '2022-10-05 00:14:00', 'active': True, 'ended': True, 'time1': {'nome': 'ALEMANHA', 'gols': 1}, 'time2': {'nome': 'BRASIL', 'gols': 7}},
-#         {'id': '2', 'horario': '2022-10-05 20:53:00', 'active': True, 'ended': True, 'time1': {'nome': 'BRASIL', 'gols': 1}, 'time2': {'nome': 'ARGENTINA', 'gols': 1}}]
+# matches = [{'id': '1', 'horario': '2022-10-05 00:14:00', 'ended': True, 'time1': {'nome': 'ALEMANHA', 'gols': 1}, 'time2': {'nome': 'BRASIL', 'gols': 7}},
+#         {'id': '2', 'horario': '2022-10-05 20:53:00', 'ended': True, 'time1': {'nome': 'BRASIL', 'gols': 1}, 'time2': {'nome': 'ARGENTINA', 'gols': 1}}]
 
 # bets = [{'userId': 'b97e2a1d-4c9a-437c-9784-5985df46cb2b', 'dateTime': '2022-10-05 00:14:08', 'time1': {'gols': 1}, 'time2': {'gols': 7}, 'matchId': '1'},   # AC
 #         {'userId': 'b97e2a1d-4c9a-437c-9784-5985df46cb2b', 'dateTime': '2022-10-05 00:14:08',

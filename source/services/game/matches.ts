@@ -9,7 +9,6 @@ export const matches = [
     {
         'id': '1',
         'horario': '2022-10-07 11:00:00',
-        'active': moment().isBefore(moment('2022-10-07 11:00:00').add(1, 'minute')),
         'ended': true,
         'time1': {
             'nome': Teams.Alemanha,
@@ -23,7 +22,6 @@ export const matches = [
     {
         'id': '2',
         'horario': '2022-10-07 14:59:00',
-        'active': moment().isBefore(moment('2022-10-07 14:59:00').add(1, 'minute')),
         'ended': false,
         'time1': {
             'nome': Teams.Brasil,
@@ -37,7 +35,6 @@ export const matches = [
     {
         'id': '3',
         'horario': '2022-10-07 18:00:00',
-        'active': moment().isBefore(moment('2022-10-07 18:00:00').add(1, 'minute')),
         'ended': false,
         'time1': {
             'nome': Teams.Brasil,
