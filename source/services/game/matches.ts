@@ -5,8 +5,8 @@ import moment from 'moment';
 export const matches = [
     {
         'id': '1',
-        'horario': '2022-10-06 23:59:00',
-        'active': moment().isBefore(moment('2022-10-06 23:59:00').add(1, 'minute')),
+        'horario': '2022-10-07 11:00:00',
+        'active': moment().isBefore(moment('2022-10-07 11:00:00').add(1, 'minute')),
         'ended': true,
         'time1': {
             'nome': Teams.Alemanha,
@@ -19,22 +19,22 @@ export const matches = [
     },
     {
         'id': '2',
-        'horario': '2022-10-06 12:14:00',
-        'active': moment().isBefore(moment('2022-10-06 12:14:00').add(1, 'minute')),
+        'horario': '2022-10-07 14:59:00',
+        'active': moment().isBefore(moment('2022-10-07 14:59:00').add(1, 'minute')),
         'ended': false,
         'time1': {
-            'nome': Teams.Alemanha,
+            'nome': Teams.Brasil,
             'gols': -1
         },
         'time2': {
-            'nome': Teams.Argentina,
+            'nome': Teams.Franca,
             'gols': -1
         }
     },
     {
         'id': '3',
-        'horario': '2022-10-10 20:53:00',
-        'active': moment().isBefore(moment('2022-10-05 20:53:00').add(1, 'minute')),
+        'horario': '2022-10-07 18:00:00',
+        'active': moment().isBefore(moment('2022-10-07 18:00:00').add(1, 'minute')),
         'ended': false,
         'time1': {
             'nome': Teams.Brasil,

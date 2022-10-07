@@ -48,8 +48,8 @@ router.use((req, res, next) => {
         }
 
         const decoded = jwt.verify(token, process.env.SECRET_JWT);
-        if (Date.now() >= decoded.expires_in * 1000)
-            throw 'Token expired'
+        // if (Date.now() >= decoded.expires_in * 1000)
+        //     throw 'Token expired'
 
         req.headers['userId'] = decoded.uuid
         req.headers['username'] = decoded.name
