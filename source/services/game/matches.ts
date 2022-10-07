@@ -1,6 +1,9 @@
 import { Matches } from "../../business/matches.interface";
 import { Teams } from "../../business/team.enum";
+
 import moment from 'moment';
+
+moment.tz.setDefault("America/Sao_Paulo");
 
 export const matches = [
     {
