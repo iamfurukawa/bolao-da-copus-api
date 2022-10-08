@@ -45,48 +45,48 @@ def apply(userId, username, bets=[]):
 
 
 def acertouOPlacar(match, bet):
-    return match['time1']['gols'] == bet['time1']['gols'] and match['time2']['gols'] == bet['time2']['gols']
+    return int(match['time1']['gols']) == int(bet['time1']['gols']) and int(match['time2']['gols']) == int(bet['time2']['gols'])
 
 
 def golsDoTimeVencedor(match, bet):
-    if match['time1']['gols'] > match['time2']['gols']:
-        return match['time1']['gols'] == bet['time1']['gols']
+    if int(match['time1']['gols']) > int(match['time2']['gols']):
+        return int(match['time1']['gols']) == int(bet['time1']['gols'])
 
-    if match['time2']['gols'] > match['time1']['gols']:
-        return match['time2']['gols'] == bet['time2']['gols']
+    if int(match['time2']['gols']) > int(match['time1']['gols']):
+        return int(match['time2']['gols']) == int(bet['time2']['gols'])
 
     return False
 
 
 def saldoDeGols(match, bet):
-    sgMatchResult = match['time1']['gols'] - match['time2']['gols']
-    sgGuess = bet['time1']['gols'] - bet['time2']['gols']
+    sgMatchResult = int(match['time1']['gols']) - int(match['time2']['gols'])
+    sgGuess = int(bet['time1']['gols']) - int(bet['time2']['gols'])
 
     return (sgMatchResult - sgGuess) == 0
 
 
 def golsdoTimePerdedor(match, bet):
-    if match['time1']['gols'] < match['time2']['gols']:
-        return match['time1']['gols'] == bet['time1']['gols']
+    if int(match['time1']['gols']) < int(match['time2']['gols']):
+        return int(match['time1']['gols']) == int(bet['time1']['gols'])
 
-    if match['time2']['gols'] < match['time1']['gols']:
-        return match['time2']['gols'] == bet['time2']['gols']
+    if int(match['time2']['gols']) < int(match['time1']['gols']):
+        return int(match['time2']['gols']) == int(bet['time2']['gols'])
 
     return False
 
 
 def acertouOVencedor(match, bet):
-    if match['time1']['gols'] > match['time2']['gols']:
-        return bet['time1']['gols'] > bet['time2']['gols']
+    if int(match['time1']['gols']) > int(match['time2']['gols']):
+        return int(bet['time1']['gols']) > int(bet['time2']['gols'])
 
-    if match['time2']['gols'] > match['time1']['gols']:
-        return bet['time2']['gols'] > bet['time1']['gols']
+    if int(match['time2']['gols']) > int(match['time1']['gols']):
+        return int(bet['time2']['gols']) > int(bet['time1']['gols'])
 
     return False
 
 
 def empateGarantido(bet):
-    return bet['time1']['gols'] == bet['time2']['gols']
+    return int(bet['time1']['gols']) == int(bet['time2']['gols'])
 
 
 def getScore(type):

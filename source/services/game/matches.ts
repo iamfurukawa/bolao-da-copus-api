@@ -22,27 +22,27 @@ export const matches = [
     {
         'id': '2',
         'horario': '2022-10-07 14:59:00',
-        'ended': false,
+        'ended': true,
         'time1': {
             'nome': Teams.Brasil,
-            'gols': -1
+            'gols': 3
         },
         'time2': {
             'nome': Teams.Franca,
-            'gols': -1
+            'gols': 2
         }
     },
     {
         'id': '3',
         'horario': '2022-10-07 18:00:00',
-        'ended': false,
+        'ended': true,
         'time1': {
             'nome': Teams.Brasil,
-            'gols': -1
+            'gols': 7
         },
         'time2': {
             'nome': Teams.Argentina,
-            'gols': -1
+            'gols': 1
         }
     }
 ] as Matches[]
